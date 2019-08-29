@@ -1,0 +1,31 @@
+{
+	"training_data_dir": "/data/datasets/16kHz/doa_train_noise",
+	"training_speech_dir": "/data/datasets/16kHz/DOA-CNN_train_TIMIT/uni_sx_os_norm_small",
+	"testing_data_dir": "/data/datasets/16kHz/DOA-CNN_train_TIMIT/25",
+	"rir_data_dir": "./reverberant_impulse_v4_16kHz",
+	"train_dir": "./tmp/train",
+	"summaries_dir": "./tmp/train_logs",
+
+	"context_window_width": 9,
+	"win_len": 256,
+	"win_shift": 128,
+	"nDFT": 256,
+	"sample_rate": 16e3,
+	"max_wav_length": 4,
+
+	"dim_direction_label": 68,
+	"direction_range": [0, 135],
+	"reverb": [0, 25, 50, 65, 75],
+	"room_idx": [1, 2],
+
+	"Adam_learn_rate": 1e-3,
+	"start_checkpoint": "./model/model.ckpt-250000",
+
+	"save_step_interval": 1000,
+	"how_many_training_steps": 250000,
+
+	"testing_doa_dir": "./test1_doa_16kHz",
+	"deg_per_sec": 5,
+	"model_dir": "./models",
+	"param_file": "model.ckpt-250000"
+}
